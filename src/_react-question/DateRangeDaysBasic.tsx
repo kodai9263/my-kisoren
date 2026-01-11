@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 
-1. やりたいこと
+/*1. やりたいこと
 「開始日」と「終了日」を選ぶと、その2つの間の“差分日数（端は含まない）」を表示します。
 開始・終了のどちらかが未選択の間は、グレーで「開始日と終了日を選択してください」と表示します。
 終了日が開始日より前の場合は、赤字でエラーメッセージを表示します。
@@ -16,34 +15,25 @@ const days = Math.round((e.getTime() - s.getTime()) / msPerDay);（端は含ま�
 表示仕様：
 未選択時: 灰色で「開始日と終了日を選択してください」
 エラー時（終了日 < 開始日）: 赤字で「終了日は開始日以降にしてください」
-正常時: 緑系で「差分: X日」
+正常時: 緑系で「差分: X日」*/
+export default function DateRangeDaysBasic() {
+  
 
-function DateRangeDaysBasic() {
-  // 次行: 開始日と終了日のstateを用意します（いずれも初期値は空文字）
-  // const [start, setStart] = ...
-  // const [end, setEnd] = ...
-
-  // 次行: 両方の入力が埋まっているときだけ差分日数やエラーを計算するための変数を用意します
-  // const bothFilled = ...; // 例) start.trim() !== '' && end.trim() !== ''
-  // let error = '';
-  // let days = null; // 数値 or null
-
-  // 次行: bothFilled のとき、new Date(YYYY-MM-DD) でDateを生成し、終了日が開始日より前ならエラーを設定
-  // そうでなければ (end - start) を日数（ミリ秒/86400000）に変換して days に代入します
-
- return (
+  return (
     <div className="max-w-md mx-auto p-5 border rounded-lg space-y-4 bg-white">
       <h2 className="text-lg font-semibold">日付レンジの差分</h2>
 
       <div className="space-y-2">
         <label htmlFor="start" className="block text-sm text-gray-700">開始日</label>
         <input
+          
           className="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
 
       <div className="space-y-2">
         <label htmlFor="end" className="block text-sm text-gray-700">終了日</label>
         <input
+          
           className="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
       </div>
 
@@ -53,5 +43,3 @@ function DateRangeDaysBasic() {
     </div>
   );
 }
-
-export default DateRangeDaysBasic;
