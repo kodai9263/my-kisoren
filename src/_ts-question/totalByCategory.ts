@@ -19,3 +19,55 @@ const items = [
 // ③ 関数の実行とconsole.logによる確認
 // ここに関数を呼び出して実行結果を表示してください。
 console.log(totalByCategory(items));
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/*interface Item {
+  category: string;
+  price: number;
+}
+
+interface TotalCategory {
+  [category: string]: number;
+}
+
+const totalByCategory = (arr: Item[]): TotalCategory => {
+  const result: TotalCategory = {};
+
+  arr.forEach((i) => {
+    if (result[i.category]) {
+      result[i.category] = result[i.category] + i.price;
+    } else {
+      result[i.category] = i.price;
+    }
+  });
+
+  return result;
+};*/
